@@ -1,0 +1,45 @@
+/* =========================================
+   FEATURE BRANCH ADDITION: Dark/Light Mode
+   Added via feature/dark-mode branch
+   ========================================= */
+
+:root[data-theme="light"] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-card: #ffffff;
+  --bg-glass: rgba(0, 0, 0, 0.03);
+  --border-glass: rgba(0, 0, 0, 0.1);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --shadow-glow: 0 0 40px rgba(99, 102, 241, 0.1);
+}
+
+:root[data-theme="light"] body { background-color: var(--bg-primary); }
+:root[data-theme="light"] .hero-section {
+  background: radial-gradient(ellipse at 20% 50%, rgba(99, 102, 241, 0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 80% 20%, rgba(168, 85, 247, 0.05) 0%, transparent 50%),
+              var(--bg-primary);
+}
+
+#themeToggle {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background: var(--gradient);
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 9999;
+  box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4);
+  transition: all 0.3s ease;
+}
+
+#themeToggle:hover { transform: scale(1.1) rotate(10deg); }
